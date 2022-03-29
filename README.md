@@ -1,16 +1,16 @@
 # DR-SLAM
 
-Drift Rejection with Manhattan Regularity for Indoor Environments
+DR-SLAM is a drift rejection SLAM method for indoor scenarios. It uses multiple feature primitives and geometric information (parallel or perpendicular) restraint in man-made environments. Under some satisfy Manhattan world assumption scene, such as corridors, we can get absolutely and drift-free rotation estimation using a Gaussian sphere. By fully utilizing drift-free rotation estimation under Manhattan world assumption and the local stability of purely track restricted by point, line, and plane features, our drift rejection SLAM method becomes more accurate and robust.
 
 ![图片1](README.assets/%E5%9B%BE%E7%89%871.svg)
 
-we updated the 
+updated on **1.5.2022**: Add octomap for navigation and Vanishing point with geometry restrain in 2d image
 
-updated on **11.12.2021** ocomap
+updated on **2.20.2022**: Add Object detection
 
-updated on **11.12.2021** object
+updated on **3.17.2022** Add Map Relocalization
 
-updated on **11.12.2021** map resuing
+<img src="README.assets/2022-03-29%2021-47-40%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" style="zoom:43%;" /> <img src="README.assets/2022-03-29%2021-44-16%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" style="zoom:70%;" />       
 
 ## 1. Prerequisites
 
