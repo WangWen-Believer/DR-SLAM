@@ -1,0 +1,10 @@
+<launch>
+    <arg name="config_path" default = "/home/wangwen/catkin_dr/src/DR-SLAM/Examples/RGB-D/Realsense.yaml" />
+    <arg name="vocabulary_path" default = "/home/wangwen/catkin_dr/src/DR-SLAM/Vocabulary/ORBvoc.txt" />
+    
+    <node name="DR_SLAM_ros" pkg="DRSLAM" type="DR_SLAM_ros" output="screen">
+        <param name="config_file" type="string" value="$(arg config_path)" />
+        <param name="vocabulary_file" type="string" value="$(arg vocabulary_path)" />
+    </node>
+
+</launch>

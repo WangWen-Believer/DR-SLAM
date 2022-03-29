@@ -1,0 +1,9 @@
+<launch>
+    <arg name="path" default = "/home/wangwen/catkin_Planar/src/PlanarSLAM/map/octomap_corridor.ot" />
+
+    <node name="octomap_talker" pkg="octomap_server" type="octomap_server_node" output="screen" args="$(arg path)">
+    <param name="frame_id" type="string" value="/map" />
+    <param name="resolution" type="string" value="0.10" />
+    </node>
+
+</launch>

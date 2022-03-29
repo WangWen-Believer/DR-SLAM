@@ -1,0 +1,123 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 6.0970550296798035e+02
+Camera.fy: 6.0909579671294716e+02
+Camera.cx: 3.1916667152289227e+02
+Camera.cy: 2.3558360480225772e+02
+
+Camera.k1: 9.2615504465028850e-02
+Camera.k2: -1.8082438825995681e-01
+Camera.p1: -6.5484100374765971e-04
+Camera.p2: -3.5829351558557421e-04
+Camera.k3: 0
+
+Camera.width: 640
+Camera.height: 480
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# IR projector baseline times fx (aprox.)
+Camera.bf: 40.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 40.0
+
+# Deptmap values factor 
+DepthMapFactor: 1000.0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 800
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 3
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+
+#--------------------------------------------------------------------------------------------
+# Plane Parameters
+#--------------------------------------------------------------------------------------------
+Plane.MinSize: 2000
+Plane.AngleThreshold: 3.0
+Plane.DistanceThreshold: 0.10 # 剔除无效平面MaxPointDistanceFromPlane
+
+#Plane.DistanceThreshold: 0.05 # 剔除无效平面MaxPointDistanceFromPlane
+Point.MaxDistance: 5.0
+Plane.LeafSize: 0.05
+Plane.MAX_MERGE_DIST: 50.0
+Plane.PATCH_SIZE: 10
+
+Plane.AssociationDisRef: 0.15 #匹配时的距离阈值
+Plane.AssociationDisMon: 0.15 #未使用
+#Plane.AssociationDisRef: 0.06 #匹配时的距离阈值
+#Plane.AssociationDisMon: 0.06 #未使用
+
+#Plane.AssociationAngRef: 0.86 # 30 degree
+#Plane.AssociationAngMon: 0.86 # 30 degree
+Plane.AssociationAngRef: 0.94 # 20 degree
+Plane.AssociationAngMon: 0.94 # 20 degree
+#Plane.AssociationAngRef: 0.965 # 15 degree
+#Plane.AssociationAngMon: 0.965 # 15 degree
+#Plane.AssociationAngRef: 0.985 # 10 degree
+#Plane.AssociationAngMon: 0.985 # 10 degree
+
+
+#Plane.VerticalThreshold: 0.0523 # 87 degree
+Plane.VerticalThreshold: 0.08716 # 85 degree
+#Plane.VerticalThreshold: 0.17365 # 80 degree
+#Plane.VerticalThreshold: 0.25882 # 75 degree
+#Plane.VerticalThreshold: 0.0 # no vertical constraint
+#Plane.ParallelThreshold: 0.96593 # 15 degree
+#Plane.ParallelThreshold: 0.98481 # 10 degree
+Plane.ParallelThreshold: 0.9962 # 5 degree
+#Plane.ParallelThreshold: 1.9962 # no parallel constraint
+
+
+#Plane.AngleInfo: 57.3 # 1 degree
+#Plane.AngleInfo: 19.1 # 3 degree
+Plane.AngleInfo: 0.5     # Information Matrix
+Plane.DistanceInfo: 1
+
+Plane.Chi: 100         # Robust Kernel
+Plane.VPChi: 50        # Robust Kernel
+
+Plane.ParallelInfo: 0.5 # Information Matrix
+Plane.VerticalInfo: 0.5 # Information Matrix
+
+SavePath.Keyframe: "KeyFrameTrajectory.txt"
+SavePath.Frame: "CameraTrajectory.txt"
+
