@@ -10,7 +10,7 @@ updated on **2.20.2022**: Add Object detection
 
 updated on **3.17.2022** Add Map Relocalization
 
-<img src="README.assets/2022-03-29%2021-47-40%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" style="zoom:43%;" /> <img src="README.assets/2022-03-29%2021-44-16%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" style="zoom:70%;" />       
+![](README.assets/2022-03-29%2021-55-47%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
 
 ## 1. Prerequisites
 
