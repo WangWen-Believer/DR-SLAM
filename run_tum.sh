@@ -23,5 +23,5 @@
 #echo "corridor_full"
 #./Examples/RGB-D/Planar_SLAM /home/wangwen/catkin_Planar/src/PlanarSLAM/Vocabulary/ORBvoc.txt /home/wangwen/catkin_Planar/src/PlanarSLAM/Examples/RGB-D/Realsense.yaml /media/wangwen/01D747F7BEB117101/DataSets/Science_Corridor/corridor_full /media/wangwen/01D747F7BEB117101/DataSets/Science_Corridor/corridor_full/associations1.txt
 echo "room_full"
-./Examples/RGB-D/Planar_SLAM /home/wangwen/catkin_Planar/src/PlanarSLAM/Vocabulary/ORBvoc.txt /home/wangwen/catkin_Planar/src/PlanarSLAM/Examples/RGB-D/Realsense.yaml /media/wangwen/01D747F7BEB117101/DataSets/Science_Corridor/room_4_full /media/wangwen/01D747F7BEB117101/DataSets/Science_Corridor/room_4_full/associations.txt
+./Examples/RGB-D/DR_SLAM /home/wangwen/catkin_Planar/src/PlanarSLAM/Vocabulary/ORBvoc.txt /home/wangwen/catkin_Planar/src/PlanarSLAM/Examples/RGB-D/Realsense.yaml /media/wangwen/01D747F7BEB117101/DataSets/Science_Corridor/room_4_full /media/wangwen/01D747F7BEB117101/DataSets/Science_Corridor/room_4_full/associations.txt
 

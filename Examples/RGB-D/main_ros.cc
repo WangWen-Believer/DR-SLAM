@@ -80,12 +80,13 @@ int main(int argc, char **argv)
 
     ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Info);
 
-    std::string config_file,vocabulary_file;
+    std::string config_file,vocabulary_file,map_file;
 
-    vocabulary_file = readParam<std::string>(n, "/Planar_Slam_ros/vocabulary_file");
-    config_file = readParam<std::string>(n, "/Planar_Slam_ros/config_file");
+    vocabulary_file = readParam<std::string>(n, "/DR_SLAM_ros/vocabulary_file");
+    config_file = readParam<std::string>(n, "/DR_SLAM_ros/config_file");
+    map_file = readParam<std::string>(n, "/DR_SLAM_ros/map_file");
 
-    Planar_SLAM::System SLAM(vocabulary_file, config_file, Planar_SLAM::System::RGBD, n,true);
+    Planar_SLAM::System SLAM(vocabulary_file, config_file,map_file, Planar_SLAM::System::RGBD, n,true);
 
     Planar_SLAM::Config::SetParameterFile(config_file);
     ImageGrabber igb(&SLAM);

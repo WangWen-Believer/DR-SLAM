@@ -149,7 +149,7 @@ namespace Planar_SLAM
         //Set pointers between threads.
         mpTracker->SetSemanticer(mpSemanticer);
     }
-System::System(const string &strVocFile, const string &strSettingsFile, const eSensor sensor,ros::NodeHandle& nh,
+System::System(const string &strVocFile, const string &strSettingsFile,const string &strMapFile, const eSensor sensor,ros::NodeHandle& nh,
                const bool bUseViewer):mSensor(sensor), mpViewer(static_cast<Viewer*>(NULL)),mbReset(false),mbActivateLocalizationMode(false),
         mbDeactivateLocalizationMode(false)
 {
@@ -252,7 +252,7 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
 
     cout << "Your setting file path is : " << strPathSystemSetting << endl;
 
-    string strPathMap = "/home/wangwen/catkin_Planar/src/PlanarSLAM/MapPointandKeyFrame.bin";
+    string strPathMap = strMapFile.c_str();
     cout << "Your map file path would be : " << strPathMap << endl;
 
     cout << "Do you want to load the map?(y/n)" << endl;

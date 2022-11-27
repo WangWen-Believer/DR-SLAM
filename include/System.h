@@ -67,7 +67,7 @@ public:
 public:
 
     // Initialize the SLAM system. It launches the Local Mapping, Loop Closing and Viewer threads.
-    System(const string &strVocFile, const string &strSettingsFile, const eSensor sensor, ros::NodeHandle& nh, const bool bUseViewer = true);
+    System(const string &strVocFile, const string &strSettingsFile, const string &strMapFile, const eSensor sensor, ros::NodeHandle& nh, const bool bUseViewer = true);
     System(const string &strVocFile, const string &strSettingsFile, const eSensor sensor, const bool bUseViewer = true);
 
     //下面是针对三种不同类型的传感器所设计的三种运动追踪接口。彩色图像为CV_8UC3类型，并且都将会被转换成为灰度图像。
